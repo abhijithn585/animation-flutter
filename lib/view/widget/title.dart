@@ -22,7 +22,7 @@ class TextTitile extends StatelessWidget {
             );
           },
           tween: Tween<double>(begin: 0, end: 1),
-          duration: const Duration(seconds: 1),
+          duration: const Duration(seconds: 5),
           child: const Text(
             'cars',
             style: TextStyle(

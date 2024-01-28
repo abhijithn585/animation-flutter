@@ -17,13 +17,29 @@ class _DetailsPageState extends State<DetailsPage> {
         body: Container(
             child: SingleChildScrollView(
                 child: Column(children: [
-          SizedBox(
-              height: 300,
-              width: 500,
-              child: Image.asset(
-                '${widget.data.image}',
-                fit: BoxFit.cover,
-              )),
+          Hero(
+            tag: widget.data.id!,
+            child: SizedBox(
+                height: 300,
+                width: 500,
+                child: Image.asset(
+                  '${widget.data.image}',
+                  fit: BoxFit.cover,
+                )),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '${widget.data.name}',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
           const SizedBox(height: 10),
           Text("${widget.data.description}",
               style: GoogleFonts.aBeeZee(fontSize: 20))
